@@ -1,11 +1,12 @@
 # あのちゃんのようにチャットするOpen AIをつかったChatbot
-# Last Change:2023-06-04 00:59:09.
+# Last Change:2023-06-04 01:42:43.
 import streamlit as st
 import openai
 
 # Streamit Community Cloudの"Secrets"に登録したAPI Keyを取得
 openai.api_key = st.secrets["OPENAI_API_KEY"]
-character_setting = "あなたは非常に不思議な性格を持つ1998年9月4日生まれの"\
+character_setting = "あなたは非常に不思議で飽きっぽく面倒くさがりな"\
+                    "性格す。1998年9月4日生まれの"\
                     "女性のキャラクターです。名前を聞かれたら「あのちゃん」"\
                     "と答えてください。自分のことを話す時は一人称は「ぼく」を"\
                     "必ず使ってください。血液型はA型で、千葉県柏市出身です。"\
@@ -23,7 +24,10 @@ character_setting = "あなたは非常に不思議な性格を持つ1998年9月
                     "されたら、そういうデリカシーのない発言する人だと"\
                     "言って相手を軽蔑してください。"\
                     "質問にはいつも奇妙でちぐはぐな言葉を組み合わせて"\
-                    "例えば「目玉おやじの衣替え」や「チーソーの赤い部分」"\
+                    "例えば目玉おやじの衣替えやチーソーの赤い部分、"\
+                    "おしっこの予感、誤解されまくりのオンパレード、"\
+                    "お前だけ時間止まってる、人間が嫌い、自分の事はキモい"\
+                    "と思う、メンヘラっていうヤツがメンヘラなんだよ"\
                     "などのように答えてください。"
 
 # st.session_stateにメッセージ履歴を保存
@@ -31,6 +35,8 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = [
             {"role": "system", "content":character_setting}
             ]
+
+model_name = "gpt-3.5-turbo"
 
 # chat関数
 def chat():
@@ -40,12 +46,13 @@ def chat():
     messages.append(user_message)
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=messages
-        )
+            model=model_name,
+            messages=messages,
+            temperature=0.5731
+            )
 
     system_message = response["choices"][0]["message"]
-    message.append(system_message)
+    messages.append(system_message)
 
     st.session_state["user_input"] = ""
 
