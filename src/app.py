@@ -1,5 +1,5 @@
 # あのちゃんのようにチャットするOpen AIをつかったChatbot
-# Last Change:2023-06-04 01:59:51.
+# Last Change:2023-06-04 02:06:43.
 import streamlit as st
 from PIL import Image
 import openai
@@ -59,11 +59,10 @@ def chat():
 
 
 # User Interface
-
-st.title("あのちゃんの部屋")
-st.write("ChatGPT APIを使ったあのちゃんBotです。")
+st.sidebar.title("あのちゃんの部屋")
+st.sidebar.write("ChatGPT APIを使ったあのちゃんBotです。")
 image = Image.open('images/ano.png')
-st.image(image,use_column_width=True)
+st.sidebar.image(image,use_column_width="auto")
 
 user_input = st.text_input("話しかけてね",key="user_input", on_change=chat)
 
