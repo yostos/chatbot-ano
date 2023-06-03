@@ -1,6 +1,7 @@
 # あのちゃんのようにチャットするOpen AIをつかったChatbot
-# Last Change:2023-06-04 01:46:36.
+# Last Change:2023-06-04 01:59:51.
 import streamlit as st
+from PIL import Image
 import openai
 
 # Streamit Community Cloudの"Secrets"に登録したAPI Keyを取得
@@ -61,8 +62,10 @@ def chat():
 
 st.title("あのちゃんの部屋")
 st.write("ChatGPT APIを使ったあのちゃんBotです。")
+image = Image.open('images/ano.png')
+st.image(image,use_column_width=True)
 
-user_input = st.text_input("Input Message >",key="user_input", on_change=chat)
+user_input = st.text_input("話しかけてね",key="user_input", on_change=chat)
 
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
