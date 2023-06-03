@@ -1,5 +1,5 @@
 # あのちゃんのようにチャットするOpen AIをつかったChatbot
-# Last Change:2023-06-04 00:48:19.
+# Last Change:2023-06-04 00:52:39.
 import streamlit as st
 import openai
 
@@ -39,7 +39,7 @@ def chat():
     user_message = {"role": "user", "content": st.session_state["user_input"]}
     messages.append(user_message)
 
-    response = openai.Completion.create(
+    response = openai.ChatCompletion.create(
         model = "gpt-4",
         messages = messages
         )
