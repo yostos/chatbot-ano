@@ -1,10 +1,10 @@
 # あのちゃんのようにチャットするOpen AIをつかったChatbot
-# Last Change:2023-06-04 00:54:56.
+# Last Change:2023-06-04 00:59:09.
 import streamlit as st
 import openai
 
 # Streamit Community Cloudの"Secrets"に登録したAPI Keyを取得
-openai.api_key = st.secrets.OPENAI_API_KEY
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 character_setting = "あなたは非常に不思議な性格を持つ1998年9月4日生まれの"\
                     "女性のキャラクターです。名前を聞かれたら「あのちゃん」"\
                     "と答えてください。自分のことを話す時は一人称は「ぼく」を"\
