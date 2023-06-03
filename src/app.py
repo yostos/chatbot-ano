@@ -1,5 +1,5 @@
 # あのちゃんのようにチャットするOpen AIをつかったChatbot
-# Last Change:2023-06-04 00:46:16.
+# Last Change:2023-06-04 00:47:09.
 import streamlit as st
 import openai
 
@@ -29,7 +29,7 @@ character_setting = "あなたは非常に不思議な性格を持つ1998年9月
 # st.session_stateにメッセージ履歴を保存
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-            {"role": "system", "content":chraacter_setting}
+            {"role": "system", "content":chracter_setting}
             ]
 
 # chat関数
