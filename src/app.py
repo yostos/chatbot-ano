@@ -1,4 +1,5 @@
-// あのちゃんのようにチャットするOpen AIをつかったChatbot
+# あのちゃんのようにチャットするOpen AIをつかったChatbot
+# Last Change:2023-06-04 00:46:16.
 import streamlit as st
 import openai
 
