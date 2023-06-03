@@ -1,5 +1,5 @@
 # あのちゃんのようにチャットするOpen AIをつかったChatbot
-# Last Change:2023-06-04 01:42:43.
+# Last Change:2023-06-04 01:46:36.
 import streamlit as st
 import openai
 
@@ -68,9 +68,9 @@ if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
     for message in reversed(messages[1:]):
-        speaker = "あなた:"
+        speaker = "🤡:"
         if message["role"] == "assistant":
-            speaker = "あのちゃん:"
+            speaker = "🐙:"
 
         st.write(speaker + message["content"])
 
