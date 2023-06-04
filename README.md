@@ -26,8 +26,8 @@ However, this [demo](https://yostos-chatbot-ano-srcapp-1amc4o.streamlit.app/) wa
 If you want to modify it yourself and make it work, follow these steps
 
 1. clone this repository on GitHub. 
-2.Modify the source and register the new repository in your own GitHub account. 
-3.Log in to OpenAI and activate your Secret Key. 
+2. Modify the source and register the new repository in your own GitHub account. 
+3. Log in to OpenAI and activate your Secret Key. 
 5. Login to Streamlit and create a new app by specifying your GitHub repository.
 Create a new app by specifying your GitHub repository. At this time, set the Secret Key of OpenAI in the Advanced Setting of Streamlit as follows.
 
