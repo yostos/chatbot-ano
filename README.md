@@ -1,10 +1,14 @@
 # Chatbot Ano
 ![MIT Lisence](https://img.shields.io/github/license/yostos/chatbot-ano)
+![OpenAI version](https://img.shields.io/github/pipenv/locked/dependency-version/yostos/chatbot-ano/openai)
+![python](https://img.shields.io/pypi/pyversions/streamlit)
 
 ChatBot using OpenAI. It pretends to be "Anochan," a TV personality active in
 Japan, and answers questions and answers your questions.
 
-See [demo](https://yostos-chatbot-ano-srcapp-1amc4o.streamlit.app/). However, this [demo](https://yostos-chatbot-ano-srcapp-1amc4o.streamlit.app/) may have been removed.
+See [demo](https://yostos-chatbot-ano-srcapp-1amc4o.streamlit.app/).
+Unfortunately, the demonstration is in Japanese.
+However, this [demo](https://yostos-chatbot-ano-srcapp-1amc4o.streamlit.app/) was created for verification purposes only and may have already been deleted.
 
 ![](./images/anochanbot.png)
 
