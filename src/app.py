@@ -1,5 +1,5 @@
 # Chatbot using Open AI that chats like Ano-chan
-# Last Change:2023-06-04 09:26:55.
+# Last Change:2023-08-10 03:17:39.
 import streamlit as st
 from PIL import Image
 import openai
@@ -44,7 +44,7 @@ if "messages" not in st.session_state:
             {"role": "system", "content":character_setting}
             ]
 
-model_name = "gpt-3.5-turbo"
+model_name = "gpt-4-32k"
 
 # chat function
 def chat():
